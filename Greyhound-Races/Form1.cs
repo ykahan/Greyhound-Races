@@ -16,11 +16,22 @@ namespace Greyhound_Races
         {
             Name = "Joe",
             Bet = new Gamble(),
-            Cash = 100,
-            Lbl = new Label(),
-            RadButt = new RadioButton()
+            Cash = 100
         };
 
+        Player Bob = new Player()
+        {
+            Name = "Bob",
+            Bet = new Gamble(),
+            Cash = 100
+        };
+
+        Player Al = new Player()
+        {
+            Name = "Al",
+            Bet = new Gamble(),
+            Cash = 100
+        };
 
         Player[] players = new Player[3];
 
@@ -28,6 +39,15 @@ namespace Greyhound_Races
         public Form1()
         {
             InitializeComponent();
+            Joe.Lbl = JoeLbl;
+            Joe.RdBtn = JoeBtn;
+            Bob.Lbl = BobLbl;
+            Bob.RdBtn = BobBtn;
+            Al.Lbl = AlLbl;
+            Al.RdBtn = AlBtn;
+            players[0] = Joe;
+            players[1] = Bob;
+            players[2] = Al;
         }
 
         private void BetSizeLbl_Click(object sender, EventArgs e)

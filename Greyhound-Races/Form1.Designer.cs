@@ -46,7 +46,7 @@
             this.StartBtn = new System.Windows.Forms.Button();
             this.JoeLbl = new System.Windows.Forms.Label();
             this.BobLbl = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.AlLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TrackPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PicBox)).BeginInit();
@@ -243,14 +243,14 @@
             this.BobLbl.TabIndex = 20;
             this.BobLbl.Text = "Bob Has Not Placed A Bet";
             // 
-            // label3
+            // AlLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(195, 329);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Al Has Not Placed A Bet";
+            this.AlLbl.AutoSize = true;
+            this.AlLbl.Location = new System.Drawing.Point(195, 329);
+            this.AlLbl.Name = "AlLbl";
+            this.AlLbl.Size = new System.Drawing.Size(123, 13);
+            this.AlLbl.TabIndex = 21;
+            this.AlLbl.Text = "Al Has Not Placed A Bet";
             // 
             // button1
             // 
@@ -269,7 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 358);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.AlLbl);
             this.Controls.Add(this.BobLbl);
             this.Controls.Add(this.JoeLbl);
             this.Controls.Add(this.StartBtn);
@@ -323,7 +323,7 @@
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Label JoeLbl;
         private System.Windows.Forms.Label BobLbl;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label AlLbl;
         private System.Windows.Forms.Button button1;
     }
 }

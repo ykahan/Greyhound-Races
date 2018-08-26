@@ -13,7 +13,7 @@ namespace Greyhound_Races
         public Gamble Bet;
         public int Cash;
         public int StartingCash = 100;
-        public RadioButton RadButt;
+        public RadioButton RdBtn;
         public Label Lbl;
         string StartLabel = "Has Not Placed A Bet.";
         string NotEnoughMoney = "Does Not Have Enough Money For That Bet.";
@@ -36,7 +36,7 @@ namespace Greyhound_Races
                 this.Lbl.Text = $"{this.Name} {StartLabel}";
                 this.Cash = StartingCash;
             }
-            this.RadButt.Text = $"{this.Name} Has ${this.Cash} Available.";
+            this.RdBtn.Text = $"{this.Name} Has ${this.Cash} Available.";
         }
 
 
