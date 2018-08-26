@@ -15,22 +15,19 @@ namespace Greyhound_Races
         Player Joe = new Player()
         {
             Name = "Joe",
-            Bet = new Gamble(),
-            Cash = 100
+            Bet = new Gamble()
         };
 
         Player Bob = new Player()
         {
             Name = "Bob",
-            Bet = new Gamble(),
-            Cash = 100
+            Bet = new Gamble()
         };
 
         Player Al = new Player()
         {
             Name = "Al",
-            Bet = new Gamble(),
-            Cash = 100
+            Bet = new Gamble()
         };
 
         Player[] players = new Player[3];
