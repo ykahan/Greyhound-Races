@@ -15,19 +15,16 @@ namespace Greyhound_Races
         Player Joe = new Player()
         {
             Name = "Joe",
-            Bet = new Gamble()
         };
 
         Player Bob = new Player()
         {
             Name = "Bob",
-            Bet = new Gamble()
         };
 
         Player Al = new Player()
         {
             Name = "Al",
-            Bet = new Gamble()
         };
 
         Player[] players = new Player[3];
@@ -45,6 +42,13 @@ namespace Greyhound_Races
             players[0] = Joe;
             players[1] = Bob;
             players[2] = Al;
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].Bet = new Gamble
+                {
+                    Bettor = players[i]
+                };
+            }
         }
 
         private void BetSizeLbl_Click(object sender, EventArgs e)

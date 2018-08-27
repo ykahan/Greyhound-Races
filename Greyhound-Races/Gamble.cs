@@ -15,7 +15,7 @@ namespace Greyhound_Races
         public override string ToString()
         {
             // Return a string that describes the amount of the bet, the dog bet on, and the name of the Player
-            return "";
+            return $"{Bettor.Name} bet ${Amount} on Dog #{Dog}.";
         }
 
         public int Payout(int Winner)
