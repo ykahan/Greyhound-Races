@@ -173,8 +173,7 @@
             // 
             // BetUpDown
             // 
-            this.BetUpDown.DecimalPlaces = 2;
-            this.BetUpDown.Location = new System.Drawing.Point(274, 258);
+            this.BetUpDown.Location = new System.Drawing.Point(273, 259);
             this.BetUpDown.Maximum = new decimal(new int[] {
             10,
             0,
@@ -186,7 +185,7 @@
             0,
             0});
             this.BetUpDown.Name = "BetUpDown";
-            this.BetUpDown.Size = new System.Drawing.Size(55, 20);
+            this.BetUpDown.Size = new System.Drawing.Size(35, 20);
             this.BetUpDown.TabIndex = 15;
             this.BetUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BetUpDown.Value = new decimal(new int[] {
@@ -198,7 +197,7 @@
             // OnDogLbl
             // 
             this.OnDogLbl.AutoSize = true;
-            this.OnDogLbl.Location = new System.Drawing.Point(335, 260);
+            this.OnDogLbl.Location = new System.Drawing.Point(314, 260);
             this.OnDogLbl.Name = "OnDogLbl";
             this.OnDogLbl.Size = new System.Drawing.Size(84, 13);
             this.OnDogLbl.TabIndex = 16;
@@ -206,7 +205,7 @@
             // 
             // DogUpDown
             // 
-            this.DogUpDown.Location = new System.Drawing.Point(425, 257);
+            this.DogUpDown.Location = new System.Drawing.Point(404, 257);
             this.DogUpDown.Maximum = new decimal(new int[] {
             4,
             0,
@@ -218,7 +217,7 @@
             0,
             0});
             this.DogUpDown.Name = "DogUpDown";
-            this.DogUpDown.Size = new System.Drawing.Size(42, 20);
+            this.DogUpDown.Size = new System.Drawing.Size(25, 20);
             this.DogUpDown.TabIndex = 17;
             this.DogUpDown.Value = new decimal(new int[] {
             1,
