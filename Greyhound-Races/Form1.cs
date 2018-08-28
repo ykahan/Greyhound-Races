@@ -28,32 +28,50 @@ namespace Greyhound_Races
         };
 
         Player[] players = new Player[3];
-
+        Greyhound[] greyhounds = new Greyhound[4];
 
         public Form1()
         {
             InitializeComponent();
-            Joe.Lbl = JoeLbl;
-            Joe.RdBtn = JoeBtn;
-            Bob.Lbl = BobLbl;
-            Bob.RdBtn = BobBtn;
-            Al.Lbl = AlLbl;
-            Al.RdBtn = AlBtn;
-            players[0] = Joe;
-            players[1] = Bob;
-            players[2] = Al;
+
+            players[0] = new Player()
+            {
+                Name = "Joe",
+                Lbl = JoeLbl,
+                RdBtn = JoeBtn,
+            };
+
+            players[1] = new Player()
+            {
+                Name = "Bob",
+                Lbl = BobLbl,
+                RdBtn = BobBtn
+            };
+            players[2] = new Player()
+            {
+                Name = "Al",
+                Lbl = AlLbl,
+                RdBtn = AlBtn
+            };
+            
             for (int i = 0; i < players.Length; i++)
             {
-                players[i].Bet = new Gamble
+                players[i].Bet = new Gamble()
                 {
-                    Bettor = players[i]
+                    Bettor = players[i],
+                    Amount = 0,
+                    Dog = 0
                 };
+            }
+            for (int i = 0; i < greyhounds.Length; i++)
+            {
+                greyhounds[i] = new Greyhound();
             }
         }
 
         private void BetSizeLbl_Click(object sender, EventArgs e)
         {
-            this.Text = $"{} wants to bet $";
+            //this.Text = $"{this.Name} wants to bet ${this.Bet.Amount}";
         }
 
         private void MinimumBetLbl_Click(object sender, EventArgs e)
@@ -64,6 +82,30 @@ namespace Greyhound_Races
         private void JoeBtn_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PlaceBetBtn_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i].RdBtn.Checked)
+                {
+                    players[i].PlaceBet((int)BetUpDown.Value, (int)DogUpDown.Value);
+                }
+            }
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
+            RaceTimer.Enabled = true;
+        }
+
+        private void RaceTimer_Tick(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < length; i++)
+            //{
+
+            //}
         }
     }
 }

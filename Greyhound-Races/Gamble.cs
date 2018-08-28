@@ -8,8 +8,8 @@ namespace Greyhound_Races
 {
     public class Gamble
     {
-        public int Amount;
-        public int Dog;
+        public int Amount = 0;
+        public int Dog = 0;
         public Player Bettor;
 
         public override string ToString()
@@ -22,6 +22,15 @@ namespace Greyhound_Races
         {
             // The paramater identifies the winning dog.  If Player bet on this dog, then return the amount bet; otherwise,
             // the negative of the amount bet.
+            if (this.Dog == Winner) return this.Amount;
+            return this.Amount * -1;
+        }
+
+        public void ClearBet()
+        {
+            // Reset Bet to 0.
+            Amount = 0;
+            Dog = 0;
         }
     }
 }

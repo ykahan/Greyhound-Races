@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TrackPicBox = new System.Windows.Forms.PictureBox();
             this.Dog1PicBox = new System.Windows.Forms.PictureBox();
@@ -47,7 +48,8 @@
             this.JoeLbl = new System.Windows.Forms.Label();
             this.BobLbl = new System.Windows.Forms.Label();
             this.AlLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PlaceBetBtn = new System.Windows.Forms.Button();
+            this.RaceTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TrackPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog2PicBox)).BeginInit();
@@ -72,7 +74,8 @@
             this.Dog1PicBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog1PicBox.Image")));
             this.Dog1PicBox.Location = new System.Drawing.Point(0, 12);
             this.Dog1PicBox.Name = "Dog1PicBox";
-            this.Dog1PicBox.Size = new System.Drawing.Size(92, 24);
+            this.Dog1PicBox.Size = new System.Drawing.Size(75, 20);
+            this.Dog1PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Dog1PicBox.TabIndex = 1;
             this.Dog1PicBox.TabStop = false;
             // 
@@ -81,16 +84,18 @@
             this.Dog2PicBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog2PicBox.Image")));
             this.Dog2PicBox.Location = new System.Drawing.Point(0, 56);
             this.Dog2PicBox.Name = "Dog2PicBox";
-            this.Dog2PicBox.Size = new System.Drawing.Size(92, 24);
+            this.Dog2PicBox.Size = new System.Drawing.Size(75, 20);
+            this.Dog2PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Dog2PicBox.TabIndex = 2;
             this.Dog2PicBox.TabStop = false;
             // 
             // Dog3PicBox
             // 
             this.Dog3PicBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog3PicBox.Image")));
-            this.Dog3PicBox.Location = new System.Drawing.Point(0, 111);
+            this.Dog3PicBox.Location = new System.Drawing.Point(0, 118);
             this.Dog3PicBox.Name = "Dog3PicBox";
-            this.Dog3PicBox.Size = new System.Drawing.Size(92, 24);
+            this.Dog3PicBox.Size = new System.Drawing.Size(75, 20);
+            this.Dog3PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Dog3PicBox.TabIndex = 3;
             this.Dog3PicBox.TabStop = false;
             // 
@@ -99,7 +104,8 @@
             this.Dog4PicBox.Image = ((System.Drawing.Image)(resources.GetObject("Dog4PicBox.Image")));
             this.Dog4PicBox.Location = new System.Drawing.Point(0, 171);
             this.Dog4PicBox.Name = "Dog4PicBox";
-            this.Dog4PicBox.Size = new System.Drawing.Size(92, 32);
+            this.Dog4PicBox.Size = new System.Drawing.Size(75, 20);
+            this.Dog4PicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Dog4PicBox.TabIndex = 4;
             this.Dog4PicBox.TabStop = false;
             // 
@@ -169,6 +175,11 @@
             // 
             this.BetUpDown.DecimalPlaces = 2;
             this.BetUpDown.Location = new System.Drawing.Point(274, 258);
+            this.BetUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.BetUpDown.Minimum = new decimal(new int[] {
             1,
             0,
@@ -224,6 +235,7 @@
             this.StartBtn.TabIndex = 18;
             this.StartBtn.Text = "Race!";
             this.StartBtn.UseVisualStyleBackColor = true;
+            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
             // JoeLbl
             // 
@@ -252,23 +264,29 @@
             this.AlLbl.TabIndex = 21;
             this.AlLbl.Text = "Al Has Not Placed A Bet";
             // 
-            // button1
+            // PlaceBetBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(343, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 60);
-            this.button1.TabIndex = 22;
-            this.button1.TabStop = false;
-            this.button1.Text = "Place Bet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.PlaceBetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaceBetBtn.Location = new System.Drawing.Point(343, 282);
+            this.PlaceBetBtn.Name = "PlaceBetBtn";
+            this.PlaceBetBtn.Size = new System.Drawing.Size(124, 60);
+            this.PlaceBetBtn.TabIndex = 22;
+            this.PlaceBetBtn.TabStop = false;
+            this.PlaceBetBtn.Text = "Place Bet";
+            this.PlaceBetBtn.UseVisualStyleBackColor = true;
+            this.PlaceBetBtn.Click += new System.EventHandler(this.PlaceBetBtn_Click);
+            // 
+            // RaceTimer
+            // 
+            this.RaceTimer.Interval = 1;
+            this.RaceTimer.Tick += new System.EventHandler(this.RaceTimer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 358);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PlaceBetBtn);
             this.Controls.Add(this.AlLbl);
             this.Controls.Add(this.BobLbl);
             this.Controls.Add(this.JoeLbl);
@@ -324,7 +342,8 @@
         private System.Windows.Forms.Label JoeLbl;
         private System.Windows.Forms.Label BobLbl;
         private System.Windows.Forms.Label AlLbl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PlaceBetBtn;
+        private System.Windows.Forms.Timer RaceTimer;
     }
 }
 

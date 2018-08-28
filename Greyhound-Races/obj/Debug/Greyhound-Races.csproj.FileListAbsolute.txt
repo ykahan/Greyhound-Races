@@ -1,0 +1,10 @@
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound-Races.csprojResolveAssemblyReference.cache
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound_Races.Form1.resources
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound_Races.Properties.Resources.resources
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound-Races.csproj.GenerateResource.Cache
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound-Races.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\bin\Debug\Greyhound-Races.exe.config
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\bin\Debug\Greyhound-Races.exe
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\bin\Debug\Greyhound-Races.pdb
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound-Races.exe
+C:\Users\USER\source\repos\HeadFirstCSharp\Major Projects\Greyhound-Races\Greyhound-Races\obj\Debug\Greyhound-Races.pdb
