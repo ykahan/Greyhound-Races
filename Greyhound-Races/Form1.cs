@@ -33,7 +33,11 @@ namespace Greyhound_Races
         public Form1()
         {
             InitializeComponent();
+            SetupGame();           
+        }
 
+        private void SetupGame()
+        {
             players[0] = new Player()
             {
                 Name = "Joe",
@@ -53,7 +57,7 @@ namespace Greyhound_Races
                 Lbl = AlLbl,
                 RdBtn = AlBtn
             };
-            
+
             for (int i = 0; i < players.Length; i++)
             {
                 players[i].Bet = new Gamble()
@@ -62,6 +66,7 @@ namespace Greyhound_Races
                     Amount = 0,
                     Dog = 0
                 };
+                players[i].UpdateLabels(0, true);
             }
             for (int i = 0; i < greyhounds.Length; i++)
             {

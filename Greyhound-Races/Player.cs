@@ -30,10 +30,7 @@ namespace Greyhound_Races
             else this.Lbl.Text = $"{this.Name} {StartLabel}";
             this.RdBtn.Text = $"{this.Name} Has ${this.Cash} Available.";
         }
-
-
- 
-
+        
         public void PlaceBet(int amount, int dogToWin)
         {
             // Attempt to place a new bet
