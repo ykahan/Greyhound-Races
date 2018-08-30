@@ -33,7 +33,7 @@ namespace Greyhound_Races
         public Form1()
         {
             InitializeComponent();
-            SetupGame();           
+            SetupGame();
         }
 
         private void SetupGame()
@@ -70,7 +70,19 @@ namespace Greyhound_Races
             }
             for (int i = 0; i < greyhounds.Length; i++)
             {
-                greyhounds[i] = new Greyhound();
+                greyhounds[i] = new Greyhound()
+                {
+                    RacetrackLength = TrackPicBox.Width - Dog1PicBox.Width,
+                    Ran = new Random()
+                };
+            }
+            greyhounds[0].PicBox = Dog1PicBox;
+            greyhounds[1].PicBox = Dog2PicBox;
+            greyhounds[2].PicBox = Dog3PicBox;
+            greyhounds[3].PicBox = Dog4PicBox;
+            for (int i = 0; i < greyhounds.Length; i++)
+            {
+                greyhounds[i].StartingPosition = greyhounds[i].PicBox.Left;
             }
         }
 
@@ -107,10 +119,10 @@ namespace Greyhound_Races
 
         private void RaceTimer_Tick(object sender, EventArgs e)
         {
-            //for (int i = 0; i < length; i++)
-            //{
-
-            //}
+            for (int i = 0; i < greyhounds.Length; i++)
+            {
+                if (greyhounds[i].Run()) RaceTimer.Enabled = false;
+            }
         }
     }
 }

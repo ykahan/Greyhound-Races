@@ -277,7 +277,7 @@
             // 
             // RaceTimer
             // 
-            this.RaceTimer.Interval = 1;
+            this.RaceTimer.Interval = 10;
             this.RaceTimer.Tick += new System.EventHandler(this.RaceTimer_Tick);
             // 
             // Form1

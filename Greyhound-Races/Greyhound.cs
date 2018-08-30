@@ -14,19 +14,26 @@ namespace Greyhound_Races
         public PictureBox PicBox;
         public int Location = 0;
         public Random Ran;
-        
+
         public bool Run()
         {
             // Move forward either 1, 2, 3 or 4 spaces at random
             // Update the position of PicBox like this:
-            // PicBox.Let = StartingPosition + Location;
+            // PicBox.Left += StartingPosition + Location;
             // Return true if I won the race, false otherwise.
-            return true;
+
+            this.Location = this.Ran.Next(1, 10);
+            this.PicBox.Left += this.StartingPosition + this.Location;
+            if (this.PicBox.Left >= this.RacetrackLength - this.PicBox.Width) {
+               
+                return true; }
+                
+            return false;
         }
 
         public void TakeStartingPosition()
         {
-            // Resert Location to 0 and PicBox to starting position
+            // Reset Location to 0 and PicBox to starting position
         }
     }
 }
