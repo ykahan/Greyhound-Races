@@ -52,6 +52,10 @@
             this.RaceTimer = new System.Windows.Forms.Timer(this.components);
             this.WhichDogWonLbl = new System.Windows.Forms.Label();
             this.ResetBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TrackPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog2PicBox)).BeginInit();
@@ -286,9 +290,9 @@
             this.WhichDogWonLbl.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.WhichDogWonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhichDogWonLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.WhichDogWonLbl.Location = new System.Drawing.Point(81, 2);
+            this.WhichDogWonLbl.Location = new System.Drawing.Point(498, 209);
             this.WhichDogWonLbl.Name = "WhichDogWonLbl";
-            this.WhichDogWonLbl.Size = new System.Drawing.Size(548, 201);
+            this.WhichDogWonLbl.Size = new System.Drawing.Size(285, 145);
             this.WhichDogWonLbl.TabIndex = 23;
             this.WhichDogWonLbl.Text = "Nobody\'s Won Yet";
             this.WhichDogWonLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,11 +309,55 @@
             this.ResetBtn.Visible = false;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "#1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(88, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "#2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(88, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "#3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(88, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "#4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 358);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ResetBtn);
             this.Controls.Add(this.WhichDogWonLbl);
             this.Controls.Add(this.PlaceBetBtn);
@@ -372,6 +420,10 @@
         private System.Windows.Forms.Timer RaceTimer;
         private System.Windows.Forms.Label WhichDogWonLbl;
         private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

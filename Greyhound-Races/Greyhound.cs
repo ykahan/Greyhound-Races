@@ -23,7 +23,8 @@ namespace Greyhound_Races
             // PicBox.Left += StartingPosition + Location;
             // Return true if I won the race, false otherwise.
 
-            this.Move = (int)(Ran.Next(1, 10) * 2 / this.Handicap );
+            this.Move = (int)(Ran.Next(1, 10) * this.Handicap );
+            if (this.Move == 0) this.Move = 1;
             this.PicBox.Left += this.Move;
             if (this.PicBox.Left >= this.RacetrackLength - this.PicBox.Width) {
                

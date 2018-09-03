@@ -111,8 +111,10 @@ namespace Greyhound_Races
         {
             for (int dog = 0; dog < greyhounds.Length; dog++)
             {
-                greyhounds[dog].Handicap = greyhounds[dog].Ran.Next(1, 6);
+                greyhounds[dog].Handicap = greyhounds[dog].Ran.Next(1, 6) / greyhounds[dog].Ran.Next(1, 6);
             }
+            WhichDogWonLbl.Text = "Nobody's Won Yet";
+            WhichDogWonLbl.Visible = true;
             RaceTimer.Enabled = true;
             ResetBtn.Visible = true;
             BetSizeLbl.Visible = false;
@@ -129,7 +131,7 @@ namespace Greyhound_Races
                 {
                     RaceTimer.Enabled = false;
                     WhichDogWonLbl.Text = $"Dog #{dog + 1} Won!";
-                    WhichDogWonLbl.Visible = true;
+                    //WhichDogWonLbl.Visible = true;
                     for (int man = 0; man < players.Length; man++)
                     {
                         players[man].Collect(dog);
