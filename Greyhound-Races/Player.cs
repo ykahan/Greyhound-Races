@@ -16,7 +16,7 @@ namespace Greyhound_Races
         public RadioButton RdBtn;
         public Label Lbl;
         string StartLabel = "Has Not Placed A Bet.";
-        string NotEnoughMoney = "Does Not Have Enough Money For That Bet.";
+        string NotEnoughMoney = "Get More Cash!";
 
         public void UpdateLabels(int amount, bool newRace)
         {
@@ -25,7 +25,7 @@ namespace Greyhound_Races
             if (!newRace)
             {
                 if (this.Cash >= amount) this.Lbl.Text = $"{this.Name} Bets ${this.Bet.Amount} On Dog #{this.Bet.Dog + 1}.";
-                else this.Lbl.Text = $"{this.Name} {NotEnoughMoney}";
+                else this.Lbl.Text = $"{NotEnoughMoney}";
             }
             else this.Lbl.Text = $"{this.Name} {StartLabel}";
             this.RdBtn.Text = $"{this.Name} Has ${this.Cash} Available.";
