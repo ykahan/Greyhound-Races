@@ -96,11 +96,6 @@ namespace Greyhound_Races
             this.Text = "Minimum bet is $1";
         }
 
-        private void JoeBtn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void PlaceBetBtn_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < players.Length; i++)
@@ -114,15 +109,24 @@ namespace Greyhound_Races
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            for (int dog = 0; dog < greyhounds.Length; dog++)
+            {
+                greyhounds[dog].Handicap = greyhounds[dog].Ran.Next(1, 6);
+            }
             RaceTimer.Enabled = true;
             ResetBtn.Visible = true;
+            BetSizeLbl.Visible = false;
+            BetUpDown.Visible = false;
+            OnDogLbl.Visible = false;
+            DogUpDown.Visible = false;
         }
 
         private void RaceTimer_Tick(object sender, EventArgs e)
         {
             for (int dog = 0; dog < greyhounds.Length; dog++)
             {
-                if (greyhounds[dog].Run() == true) {
+                if (greyhounds[dog].Run() == true)
+                {
                     RaceTimer.Enabled = false;
                     WhichDogWonLbl.Text = $"Dog #{dog + 1} Won!";
                     WhichDogWonLbl.Visible = true;
@@ -132,7 +136,7 @@ namespace Greyhound_Races
                         players[man].UpdateLabels(0, true);
                     }
                     break;
-                    
+
                 }
             }
         }
@@ -144,7 +148,13 @@ namespace Greyhound_Races
                 greyhounds[i].TakeStartingPosition();
                 ResetBtn.Visible = false;
                 WhichDogWonLbl.Visible = false;
+                BetSizeLbl.Visible = true;
+                BetUpDown.Visible = true;
+                OnDogLbl.Visible = true;
+                DogUpDown.Visible = true;
             }
         }
+
+
     }
 }

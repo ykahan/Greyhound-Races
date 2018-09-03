@@ -141,7 +141,6 @@
             this.JoeBtn.TabStop = true;
             this.JoeBtn.Text = "Joe";
             this.JoeBtn.UseVisualStyleBackColor = true;
-            this.JoeBtn.CheckedChanged += new System.EventHandler(this.JoeBtn_CheckedChanged);
             // 
             // BobBtn
             // 
@@ -168,14 +167,14 @@
             this.BetSizeLbl.AutoSize = true;
             this.BetSizeLbl.Location = new System.Drawing.Point(195, 260);
             this.BetSizeLbl.Name = "BetSizeLbl";
-            this.BetSizeLbl.Size = new System.Drawing.Size(82, 13);
+            this.BetSizeLbl.Size = new System.Drawing.Size(77, 13);
             this.BetSizeLbl.TabIndex = 14;
-            this.BetSizeLbl.Text = "Wants To Bet $";
+            this.BetSizeLbl.Text = "Bet Amount? $";
             this.BetSizeLbl.Click += new System.EventHandler(this.BetSizeLbl_Click);
             // 
             // BetUpDown
             // 
-            this.BetUpDown.Location = new System.Drawing.Point(273, 259);
+            this.BetUpDown.Location = new System.Drawing.Point(273, 257);
             this.BetUpDown.Maximum = new decimal(new int[] {
             10,
             0,
@@ -199,11 +198,11 @@
             // OnDogLbl
             // 
             this.OnDogLbl.AutoSize = true;
-            this.OnDogLbl.Location = new System.Drawing.Point(314, 260);
+            this.OnDogLbl.Location = new System.Drawing.Point(331, 259);
             this.OnDogLbl.Name = "OnDogLbl";
-            this.OnDogLbl.Size = new System.Drawing.Size(84, 13);
+            this.OnDogLbl.Size = new System.Drawing.Size(67, 13);
             this.OnDogLbl.TabIndex = 16;
-            this.OnDogLbl.Text = "On Dog Number";
+            this.OnDogLbl.Text = "Which Dog?";
             // 
             // DogUpDown
             // 
@@ -234,7 +233,7 @@
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(285, 145);
             this.StartBtn.TabIndex = 18;
-            this.StartBtn.Text = "Race!";
+            this.StartBtn.Text = "Run!";
             this.StartBtn.UseVisualStyleBackColor = true;
             this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
@@ -301,7 +300,7 @@
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(124, 59);
             this.ResetBtn.TabIndex = 24;
-            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.Text = "Prepare New Race";
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Visible = false;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
