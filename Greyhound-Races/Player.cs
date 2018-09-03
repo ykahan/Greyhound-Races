@@ -24,7 +24,7 @@ namespace Greyhound_Races
             // on my radio button to show my cash.
             if (!newRace)
             {
-                if (this.Cash >= amount) this.Lbl.Text = $"{this.Name} Bets ${this.Bet.Amount} On Dog #{this.Bet.Dog}.";
+                if (this.Cash >= amount) this.Lbl.Text = $"{this.Name} Bets ${this.Bet.Amount} On Dog #{this.Bet.Dog + 1}.";
                 else this.Lbl.Text = $"{this.Name} {NotEnoughMoney}";
             }
             else this.Lbl.Text = $"{this.Name} {StartLabel}";

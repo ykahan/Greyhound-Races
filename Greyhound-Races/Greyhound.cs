@@ -9,10 +9,10 @@ namespace Greyhound_Races
 {
     public class Greyhound
     {
-        public int StartingPosition;
+        public int Position;
         public int RacetrackLength;
         public PictureBox PicBox;
-        public int Location = 0;
+        public int Move = 0;
         public Random Ran;
 
         public bool Run()
@@ -22,8 +22,8 @@ namespace Greyhound_Races
             // PicBox.Left += StartingPosition + Location;
             // Return true if I won the race, false otherwise.
 
-            this.Location = this.Ran.Next(1, 10);
-            this.PicBox.Left += this.StartingPosition + this.Location;
+            this.Move = this.Ran.Next(1, 10);
+            this.PicBox.Left += this.Move;
             if (this.PicBox.Left >= this.RacetrackLength - this.PicBox.Width) {
                
                 return true; }
@@ -34,6 +34,7 @@ namespace Greyhound_Races
         public void TakeStartingPosition()
         {
             // Reset Location to 0 and PicBox to starting position
+            this.PicBox.Left = 0;
         }
     }
 }

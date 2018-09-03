@@ -82,7 +82,7 @@ namespace Greyhound_Races
             greyhounds[3].PicBox = Dog4PicBox;
             for (int i = 0; i < greyhounds.Length; i++)
             {
-                greyhounds[i].StartingPosition = greyhounds[i].PicBox.Left;
+                greyhounds[i].Position = greyhounds[i].PicBox.Left;
             }
         }
 
@@ -107,7 +107,7 @@ namespace Greyhound_Races
             {
                 if (players[i].RdBtn.Checked)
                 {
-                    players[i].PlaceBet((int)BetUpDown.Value, (int)DogUpDown.Value);
+                    players[i].PlaceBet((int)BetUpDown.Value, (int)DogUpDown.Value - 1);
                 }
             }
         }
@@ -115,13 +115,35 @@ namespace Greyhound_Races
         private void StartBtn_Click(object sender, EventArgs e)
         {
             RaceTimer.Enabled = true;
+            ResetBtn.Visible = true;
         }
 
         private void RaceTimer_Tick(object sender, EventArgs e)
         {
+            for (int dog = 0; dog < greyhounds.Length; dog++)
+            {
+                if (greyhounds[dog].Run() == true) {
+                    RaceTimer.Enabled = false;
+                    WhichDogWonLbl.Text = $"Dog #{dog + 1} Won!";
+                    WhichDogWonLbl.Visible = true;
+                    for (int man = 0; man < players.Length; man++)
+                    {
+                        players[man].Collect(dog);
+                        players[man].UpdateLabels(0, true);
+                    }
+                    break;
+                    
+                }
+            }
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
             for (int i = 0; i < greyhounds.Length; i++)
             {
-                if (greyhounds[i].Run()) RaceTimer.Enabled = false;
+                greyhounds[i].TakeStartingPosition();
+                ResetBtn.Visible = false;
+                WhichDogWonLbl.Visible = false;
             }
         }
     }

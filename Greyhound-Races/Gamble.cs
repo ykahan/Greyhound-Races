@@ -22,8 +22,8 @@ namespace Greyhound_Races
         {
             // The paramater identifies the winning dog.  If Player bet on this dog, then return the amount bet; otherwise,
             // the negative of the amount bet.
-            if (this.Dog == Winner) return this.Amount;
-            return this.Amount * -1;
+            if (this.Dog == Winner) return (this.Amount);
+            else return (this.Amount * -1);
         }
 
         public void ClearBet()

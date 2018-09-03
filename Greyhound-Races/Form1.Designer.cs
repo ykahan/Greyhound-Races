@@ -50,6 +50,8 @@
             this.AlLbl = new System.Windows.Forms.Label();
             this.PlaceBetBtn = new System.Windows.Forms.Button();
             this.RaceTimer = new System.Windows.Forms.Timer(this.components);
+            this.WhichDogWonLbl = new System.Windows.Forms.Label();
+            this.ResetBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TrackPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog1PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dog2PicBox)).BeginInit();
@@ -280,11 +282,37 @@
             this.RaceTimer.Interval = 10;
             this.RaceTimer.Tick += new System.EventHandler(this.RaceTimer_Tick);
             // 
+            // WhichDogWonLbl
+            // 
+            this.WhichDogWonLbl.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.WhichDogWonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhichDogWonLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.WhichDogWonLbl.Location = new System.Drawing.Point(81, 2);
+            this.WhichDogWonLbl.Name = "WhichDogWonLbl";
+            this.WhichDogWonLbl.Size = new System.Drawing.Size(548, 201);
+            this.WhichDogWonLbl.TabIndex = 23;
+            this.WhichDogWonLbl.Text = "Nobody\'s Won Yet";
+            this.WhichDogWonLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.WhichDogWonLbl.Visible = false;
+            // 
+            // ResetBtn
+            // 
+            this.ResetBtn.Location = new System.Drawing.Point(343, 283);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(124, 59);
+            this.ResetBtn.TabIndex = 24;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Visible = false;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 358);
+            this.Controls.Add(this.ResetBtn);
+            this.Controls.Add(this.WhichDogWonLbl);
             this.Controls.Add(this.PlaceBetBtn);
             this.Controls.Add(this.AlLbl);
             this.Controls.Add(this.BobLbl);
@@ -343,6 +371,8 @@
         private System.Windows.Forms.Label AlLbl;
         private System.Windows.Forms.Button PlaceBetBtn;
         private System.Windows.Forms.Timer RaceTimer;
+        private System.Windows.Forms.Label WhichDogWonLbl;
+        private System.Windows.Forms.Button ResetBtn;
     }
 }
 
