@@ -115,6 +115,7 @@ namespace Greyhound_Races
             }
             WhichDogWonLbl.Text = "Nobody's Won Yet";
             WhichDogWonLbl.Visible = true;
+            ResetBtn.Enabled = false;
             RaceTimer.Enabled = true;
             ResetBtn.Visible = true;
             BetSizeLbl.Visible = false;
@@ -131,6 +132,7 @@ namespace Greyhound_Races
                 {
                     RaceTimer.Enabled = false;
                     WhichDogWonLbl.Text = $"Dog #{dog + 1} Won!";
+                    ResetBtn.Enabled = true;
                     //WhichDogWonLbl.Visible = true;
                     for (int man = 0; man < players.Length; man++)
                     {
