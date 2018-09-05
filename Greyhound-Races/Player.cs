@@ -12,7 +12,6 @@ namespace Greyhound_Races
         public string Name;
         public Gamble Bet;
         public int Cash = 100;
-        //public int StartingCash = 100;
         public RadioButton RdBtn;
         public Label Lbl;
         string StartLabel = "Has Not Placed A Bet.";
